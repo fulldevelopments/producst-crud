@@ -1,0 +1,20 @@
+.form-group .required:after {
+  content: "*";
+  color: red;
+}
+
+.container-field-qt {
+  display: flex;
+  align-items: center;
+}
+
+.container-field-qt p-inputnumber {
+  width: 80%;
+}
+
+.container-field-qt label {
+  margin-left: 16px;
+  font-weight: 600;
+  width: 20%;
+  font-size: 28px;
+}

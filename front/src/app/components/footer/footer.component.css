@@ -1,0 +1,18 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(22, 3, 3);
+  font-family: sans-serif;
+}
+
+.footer > span {
+  font-size: 1.1rem;
+  font-weight: 300;
+}

@@ -1,0 +1,63 @@
+<div class="card">
+  <h1>{{title}}</h1>
+  <form [formGroup]="form" class="p-fluid p-formgrid p-grid" (ngSubmit)="execAction()">
+
+    <div class="p-field p-col-12 p-md-4">
+      <input class="p-inputtext p-component" type="text" pInputText pKeyFilter="alpha" formControlName="name" required
+        [(ngModel)]="product.name" placeholder="Nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-4">
+      <p-dropdown (onChange)="onChangeMunit()" showClear="true" formControlName="munit" placeholder="Unidade medida"
+        [options]="optionUM" [(ngModel)]="product.munit" optionLabel="viewValue">
+      </p-dropdown>
+    </div>
+
+    <div class="p-field p-col-12 p-md-2 container-field-qt">
+
+      <p-inputNumber prefix="Quantidade " id="inputTypeMunit" inputId="minmaxfraction" [minFractionDigits]="minFrac"
+        [maxFractionDigits]="maxFrac" formControlName="qt" [(ngModel)]="product.qt" mode="decimal">
+      </p-inputNumber>
+      <label for="inputTypeMunit">{{typeMunit}}</label>
+    </div>
+
+    <div class="p-field p-col-12 p-md-2">
+      <p-inputNumber prefix="Preço R$ " formControlName="price" [(ngModel)]="product.price" mode="decimal"
+        [minFractionDigits]="2" [maxFractionDigits]="5">
+      </p-inputNumber>
+    </div>
+
+    <div class="p-field p-col-12 p-md-4">
+      <p-calendar [readonlyInput]="true" showButtonBar="true" validateField="true" dateFormat="dd/mm/yy"
+        formControlName="dtValidade" placeholder="Data de validade" [(ngModel)]="product.dtValidade" [showIcon]="true"
+        inputId="icon">
+      </p-calendar>
+    </div>
+
+
+    <div class="p-field p-col-12 p-md-4">
+      <p-calendar [readonlyInput]="true" showButtonBar="true" validateField="true" dateFormat="dd/mm/yy"
+        formControlName="dtManufac" placeholder="Data de fabricação" [(ngModel)]="product.dtManufac" [showIcon]="true"
+        inputId="icon">
+      </p-calendar>
+    </div>
+
+    <div class="toggle-container p-col-12 p-md-4">
+      <p-toggleButton (onChange)="onChangePerishable()" formControlName="perishable" placeholder="Perecível"
+        [(ngModel)]="product.perishable" onIcon="pi pi-check" offIcon="pi pi-times">
+      </p-toggleButton>
+      <label>Perecível</label>
+    </div>
+
+
+    <div class="p-field p-col-6 p-md-2">
+      <button pButton pRipple type="submit" [hidden]="buttonsVisible" label="{{label}}" class="margin-right-16"
+        [ngClass]="{'success':'p-button-success','danger':'p-button-danger','warning':'p-button-warning'}[type]"></button>
+    </div>
+
+    <div class="p-field p-col-6 p-md-2">
+      <button  [hidden]="buttonsVisible" (click)="cancel()" pButton pRipple type="button" label="Cancelar" class="p-button-secondary"></button>
+    </div>
+
+  </form>
+</div>

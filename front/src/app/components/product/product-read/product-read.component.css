@@ -1,0 +1,37 @@
+.full-width-table {
+  width: 100%;
+}
+
+.edit, .delete {
+  margin-right: 4px;
+}
+
+.edit>i {
+  color: #d9cd15;
+}
+
+.delete>i {
+  color: #e35e61;
+}
+
+.add>i {
+  color: #0fb625;
+}
+
+.edit, .add, .delete {
+  border: 0;
+  cursor: pointer;
+  background-color: #303030;
+}
+
+.delete> :hover {
+  opacity: 50%;
+}
+
+.edit> :hover {
+  opacity: 50%;
+}
+
+.add> :hover {
+  opacity: 50%;
+}

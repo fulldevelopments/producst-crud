@@ -1,0 +1,15 @@
+.container {
+  /*border: 1px solid #dee2e6;*/
+}
+
+.side-nav{
+  width: 250px;
+}
+
+.nav-list i{
+  padding-right: 10px;
+}
+
+.content{
+  padding: 16px;
+}
